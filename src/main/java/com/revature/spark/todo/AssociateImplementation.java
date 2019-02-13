@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+
 import com.revature.spark.beans.Customer;
 import com.revature.spark.beans.Flight;
 
@@ -23,7 +24,11 @@ public class AssociateImplementation {
 	 * @return
 	 */
 	public Double sum(List<Flight> flights) {
-		return 0.0;
+		double total = 0;
+		for(int i = 0; i < flights.size(); i++) {
+			total = total + flights.get(i).getTicketPrice();
+		}
+		return total;
 	}
 
 	/**
@@ -33,7 +38,13 @@ public class AssociateImplementation {
 	 * @return
 	 */
 	public Double min(List<Flight> flights) {
-		return 0.0;
+		double minVal = flights.get(0).getTicketPrice();
+		for(int i = 1; i < flights.size(); i++) {
+			if(flights.get(i).getTicketPrice() < minVal) {
+				minVal = flights.get(i).getTicketPrice();
+			}
+		}
+		return minVal;
 	}
 
 	/**
@@ -43,7 +54,13 @@ public class AssociateImplementation {
 	 * @return
 	 */
 	public Double max(List<Flight> flights) {
-		return 0.0;
+		double maxVal = flights.get(0).getTicketPrice();
+		for(int i = 1; i < flights.size(); i++) {
+			if(flights.get(i).getTicketPrice() > maxVal) {
+				maxVal = flights.get(i).getTicketPrice();
+			}
+		}
+		return maxVal;
 	}
 
 	/**
@@ -53,7 +70,9 @@ public class AssociateImplementation {
 	 * @return
 	 */
 	public Double avg(List<Flight> flights) {
-		return 0.0;
+		double total = sum(flights);
+		double average = total / flights.size();
+		return average;
 	}
 
 	/**
@@ -63,8 +82,42 @@ public class AssociateImplementation {
 	 * @return
 	 */
 	public Double median(List<Flight> flights) {
-		return 0.0;
+		int middle = flights.size() / 2;
+		double ticketArray[] = new double[flights.size()];
+		for(int i = 0; i < flights.size(); i++) {
+			ticketArray[i] = flights.get(i).getTicketPrice();
+		}
+		double[] sortedArr = selectionSort(ticketArray);
+		System.out.println(middle);
+		double evenMid = 0;
+		//return middle;
+		if(flights.size() %2 == 0) {
+			evenMid = (sortedArr[middle] + sortedArr[middle+1])/2;
+			return evenMid;
+		}
+		else {	
+			return sortedArr[middle];
+			
+		}
+
+		
 	}
+	
+	public double[] selectionSort(double[] arr){
+        int minindex = 0;
+        for(int i = 0; i < arr.length; i++){
+            minindex = i;
+            for(int j = i+1; j < arr.length; j++){
+                if(arr[j] < arr[minindex]){
+                    minindex = j;
+                }
+            }
+            double temp = arr[i];
+            arr[i] = arr[minindex];
+            arr[minindex]=temp;
+        }
+        return arr;
+    }
 
 	/**
 	 * !! BONUS CHALLENGE REQUIREMENT !!

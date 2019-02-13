@@ -1,3 +1,157 @@
 <html>
-<body>Hello World</body>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="index.css" />
+</head>
+<body>
+
+<div id="addFlight" style="height:250px;">
+<h2 align="Center" style="border-bottom: solid black;"><u>Register Flight</u></h2>
+<form>
+<br>
+<div style="margin-left:10px; margin-right:auto;float:left;">
+<label>Customer ID</label>
+<br>
+<input type="number" id ="custID">
+<br>
+<label>Airline</label>
+<br>
+<input type="number" id="airline">
+</div>
+<div style="float:right; margin-left:auto; margin-right:10px; margin-top:10px;">
+<label>Destination</label>
+<br>
+<input type="text" id ="destination">
+<br>
+<label>Depart From</label>
+<br>
+<input type="text" id ="depart">
+<br>
+<label>Ticket Price</label>
+<br>
+<input type="number" id="ticketPrice" step="0.01">
+<br>
+</div>
+</form>
+<div align="center">
+<button id="submitFlight" style="margin-top: 90px;">Submit Flight</button>
+<p hidden id="errorMessage" style="color:red;">Invalid inputs, please enter correct information!</p>
+</div>
+</div>
+<div id="flightsDiv" style="
+background-color:rgb(214, 154, 75); 
+width: 990px;
+padding-top: 30px;
+padding-bottom: 30px;
+margin-left:auto;
+margin-right:auto;
+margin-bottom:20px;
+border:solid;
+border-width: 10px;
+">
+<h4 class="titleHeaders">Complete Flights</h4>
+<table id="registeredFlight">
+<tr>
+<th class="hasBorders" width="128">Customer ID</th>
+<th class="hasBorders" width="128">First Name</th>
+<th class="hasBorders" width="128">Last Name</th>
+<th class="hasBorders" width="128">Flight Number</th>
+<th class="hasBorders" width="128">Destination</th>
+<th class="hasBorders" width="128">Departs From</th>
+<th style="border-bottom: solid black;" width="128" height="50">Ticket Price</th>
+</tr>
+</table>
+
+
+<h4 class="titleHeaders">List of Flights</h4>
+<table id="flightList">
+<tr>
+<th class="hasBorders" width="225" height="50">Flight Number</th>
+<th class="hasBorders" width="225" height="50">Destination</th>
+<th class="hasBorders" width="225" height="50">Departs From</th>
+<th style="border-bottom: solid black;" width="225" height="50">Ticket Price</th>
+</tr>
+</table>
+<br>
+<div id="priceInformation">
+<label>minimum ticket price: </label>
+<label id="minVal"></label>
+<br>
+<label>maximum ticket price: </label>
+<label id="maxVal"></label>
+<br>
+<label>average ticket price: </label>
+<label id="averagVal" step="0.01"></label>
+<br>
+<label>median ticket price: </label>
+<label id="medianVal"></label>
+<br>
+<form>
+<label>Remove Flight</label>
+<form>
+<input type="number" id="deleteRow">
+</form>
+<input type="submit" id ="deleting" value="remove flight">
+</form>
+</div>
+</div>
+<div id="updateFlight" style="border:solid;
+	border-radius: 20px;
+	background-color: rgb(223, 223, 223);
+	margin-left:auto;
+    margin-right:auto;
+    margin-top: 0px;
+    display: block;
+    text-align:center;
+    width:900px">
+<h2 align="Center" style="border-bottom: solid black;">Update a Flight</h2>
+<form>
+<label>Airline</label>
+<br>
+<input type="number" id="updatingAirline">
+<br>
+<br>
+<label>Customer ID</label>
+<br>
+<input type="number" id="updCustID">
+<br>
+<br>
+<label><u>Flight Information</u></label>
+<br>
+<br>
+<label style="margin-right:80px;">Destination</label>
+<label>Depart From</label>
+<label style="margin-left:80px;">Ticket Price</label>
+<br>
+<input type="text" id="updateDest">
+<input type="text" id="updateDepart">
+<input type="number" id="updatePrice" step="0.01">
+<br>
+</form>
+<button id="updFlight">Update Flight</button>
+</div>
+<div id="customerList" style="
+background-color:rgb(214, 154, 75); 
+width: 800px;
+padding-top: 10px;
+padding-bottom: 10px;
+margin-left:auto;
+margin-right:auto;
+margin-top:20px;
+margin-bottom:20px;
+border:solid;
+border-width: 10px;
+">
+<h4 class="titleHeaders">List of Customers</h4>
+<table id="custList">
+<tr>
+<th class="hasBorders" width="165">Customer ID</th>
+<th class="hasBorders" width="165">First Name</th>
+<th style="border-bottom: solid black;" width="165">Last Name</th>
+</tr>
+</table>
+</div>
+
+<script src="javascript.js"></script>
+</body>
 </html>
