@@ -119,3 +119,18 @@ h4{
 	background-color: rgb(129, 80, 16);
 }
 
+#customerButton a{
+	display:block;
+   width:150px;
+   margin:0 auto;
+}
+
+#customerButton a > button{
+    background-color: rgb(59, 42, 19);
+    color: white;
+    border: none;
+    height: 40px;
+    width:150px;
+    font-weight: 800;
+    text-align: center;
+  }

@@ -1,0 +1,56 @@
+#customerList{
+	border:solid;
+	background-color: rgb(255, 205, 129);
+	margin-bottom: 20px;
+	width: 500px;
+    margin-left:auto;
+    margin-right:auto;
+    display: block;
+    text-align: center;
+}
+
+#customerList tr{
+	text-align: center;
+	width: 500px;
+}
+
+body{
+	background-image:url("image/presentationNeg1background.png");
+	background-repeat: none;
+	background-size: 100%;
+}
+
+.hasBorders{
+	border-right:solid;
+	border-bottom:solid;
+}
+
+.titleHeaders{
+	 background-color: rgb(255, 205, 129);
+	 margin-bottom: 0px;
+	 width: 450px;
+    margin-left:auto;
+    margin-right:auto;
+    display: block;
+    font-size: 30px;
+    border-top:solid;
+    border-left:solid;
+    border-right:solid;
+    text-align:center;
+}
+
+#flightButton a{
+	display:block;
+   width:150px;
+   margin:0 auto;
+}
+
+#flightButton a > button{
+    background-color: rgb(59, 42, 19);
+    color: white;
+    border: none;
+    height: 40px;
+    width:150px;
+    font-weight: 800;
+    text-align: center;
+  }
