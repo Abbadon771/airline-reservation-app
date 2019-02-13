@@ -37,6 +37,9 @@
 <button id="submitFlight" style="margin-top: 90px;">Submit Flight</button>
 <p hidden id="errorMessage" style="color:red;">Invalid inputs, please enter correct information!</p>
 </div>
+<div id="customerButton">
+<a href="customer.html" style="margin-top:10px;"><button>Customer Page</button></a>
+</div>
 </div>
 <div id="flightsDiv" style="
 background-color:rgb(214, 154, 75); 
@@ -87,17 +90,13 @@ border-width: 10px;
 <label id="medianVal"></label>
 <br>
 <form>
-<label>Remove Flight</label>
+<h4 style="text-align: left; margin-bottom:0px;"><u>Remove Flight</u></h4>
 <form>
 <input type="number" id="deleteRow">
 </form>
 <input type="submit" id ="deleting" value="remove flight">
 </form>
 <br>
-<div id="customerButton">
-<a href="customer.html"><button>Customer Page</button></a>
-</div>
-</div>
 </div>
 <div id="updateFlight" style="border:solid;
 	border-radius: 20px;
@@ -107,8 +106,12 @@ border-width: 10px;
     margin-top: 0px;
     display: block;
     text-align:center;
-    width:900px">
+    width:900px;
+    height:400px;">
 <h2 align="Center" style="border-bottom: solid black;">Update a Flight</h2>
+<div id="customerButton">
+<a href="customer.html" style="margin-bottom: 10px;"><button>Customer Page</button></a>
+</div>
 <form>
 <label>Airline</label>
 <br>
@@ -134,6 +137,8 @@ border-width: 10px;
 </form>
 <button id="updFlight">Update Flight</button>
 </div>
+</div>
+
 
 
 <script src="javascript.js"></script>

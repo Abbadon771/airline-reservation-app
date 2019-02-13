@@ -158,9 +158,6 @@ function CreateCustomerFlight(callback){
     
 }
 
-function deleteRegisteredFlight(){
-	
-}
 
 function getCustomerID(xhr, custID){
 	let jsonResponse = xhr.response;
@@ -275,6 +272,9 @@ function deleteFlight(xhr, airline){
     xhr2.setRequestHeader("Content-Type", "application/json");
     xhr2.send(jsonUser);
     }
+    else{
+    	alert("This flight is not on the List!");
+    }
 }
 //;
 document.getElementById("updFlight").setAttribute("onclick", "updateFlight(updateThis); window.location.href=window.location.href");
@@ -367,7 +367,7 @@ function updateThis(xhr, airline){
     xhr1.send();
     }
     else{
-    	alert("This flight is not on the List!");
+    	alert("Invalid Inputs!");
     }
 }
 

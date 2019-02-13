@@ -24,7 +24,7 @@ public class AssociateImplementation {
 	 * @return
 	 */
 	public Double sum(List<Flight> flights) {
-		double total = 0;
+		double total = 0.0;
 		for(int i = 0; i < flights.size(); i++) {
 			total = total + flights.get(i).getTicketPrice();
 		}
