@@ -140,7 +140,7 @@ function mediVal(xhrObj){
 	document.getElementById("medianVal").innerHTML = Math.round(xhrObj.response* 100) / 100;
 }
 
-document.getElementById("submitFlight").setAttribute("onclick", "CreateCustomerFlight(getCustomerID); window.location.reload();");
+document.getElementById("submitFlight").setAttribute("onclick", "CreateCustomerFlight(getCustomerID);");
 function CreateCustomerFlight(callback){
 	var cstID = document.getElementById("custID").value;
 	console.log(cstID);
