@@ -88,7 +88,6 @@ public class AssociateImplementation {
 			ticketArray[i] = flights.get(i).getTicketPrice();
 		}
 		double[] sortedArr = selectionSort(ticketArray);
-		System.out.println(middle);
 		double evenMid = 0;
 		//return middle;
 		if(flights.size() %2 == 0) {

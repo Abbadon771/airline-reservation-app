@@ -140,7 +140,7 @@ function mediVal(xhrObj){
 	document.getElementById("medianVal").innerHTML = Math.round(xhrObj.response* 100) / 100;
 }
 
-document.getElementById("submitFlight").setAttribute("onclick", "CreateCustomerFlight(getCustomerID);");
+document.getElementById("submitFlight").setAttribute("onclick", "CreateCustomerFlight(getCustomerID); window.location.reload();");
 function CreateCustomerFlight(callback){
 	var cstID = document.getElementById("custID").value;
 	console.log(cstID);
@@ -230,7 +230,7 @@ function getCustomerID(xhr, custID){
     	document.getElementById("errorMessage").hidden = false;
     }
 }
-document.getElementById("deleting").setAttribute("onclick", "removeFlight(deleteFlight); window.location.href=window.location.href;");
+document.getElementById("deleting").setAttribute("onclick", "removeFlight(deleteFlight);");
 function removeFlight(callback){
 	var deleting = document.getElementById("deleteRow").value;
 	console.log(deleting);
@@ -239,6 +239,7 @@ function removeFlight(callback){
     xhr.onreadystatechange = function(){
         if(xhr.readyState===4&&xhr.status===200){
             callback(this, deleting); //passing in the entire xhr object
+            location.reload();
         }
     }
     xhr.send();
@@ -277,7 +278,7 @@ function deleteFlight(xhr, airline){
     }
 }
 //;
-document.getElementById("updFlight").setAttribute("onclick", "updateFlight(updateThis); window.location.href=window.location.href");
+document.getElementById("updFlight").setAttribute("onclick", "updateFlight(updateThis);");
 function updateFlight(callback){
 	var updating = document.getElementById("updatingAirline").value;
 	let xhr = new XMLHttpRequest();
@@ -285,6 +286,7 @@ function updateFlight(callback){
     xhr.onreadystatechange = function(){
         if(xhr.readyState===4&&xhr.status===200){
             callback(this, updating); //passing in the entire xhr object
+            location.reload();
         }
     }
     xhr.send();
@@ -384,3 +386,4 @@ getFlights(printResponse);
 //var value = getCustomerID("Jonathon", "Jee");
 //console.log(value);
 //CreateCustomerFlight("Verine","Caton",getCustomerID);
+

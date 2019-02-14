@@ -9,6 +9,14 @@ function getCustomers(callback){
     xhr.send();
 }
 
+
+function printResponse(xhrObj){
+    let jsonResponse = xhrObj.response;
+    let books = JSON.parse(jsonResponse);
+    console.log(books);
+    console.log(books[0]);
+}
+
 function addCustomers(xhrObj){
 	let jsonResponse = xhrObj.response;
     let customers = JSON.parse(jsonResponse);
